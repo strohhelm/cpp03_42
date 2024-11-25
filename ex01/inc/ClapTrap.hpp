@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/25 17:11:02 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/25 17:09:58 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
-	private:
+	protected:
 		std::string		_name;
 		unsigned int	_health_points;
 		unsigned int	_energy_points;
