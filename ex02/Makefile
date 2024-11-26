@@ -6,11 +6,11 @@
 #    By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 11:17:57 by pstrohal          #+#    #+#              #
-#    Updated: 2024/11/22 12:45:45 by pstrohal         ###   ########.fr        #
+#    Updated: 2024/11/26 19:12:23 by pstrohal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = main
+NAME = FragTrap
 
 CC = c++
 
@@ -27,7 +27,9 @@ vpath %.d $(DEP_DIR)
 
 
 FILES =	main.cpp \
-		Fixed.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp \
+		FragTrap.cpp
 
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))
 OBJ =	$(addprefix $(OBJ_DIR)/, $(FILES:%.cpp=%.o))

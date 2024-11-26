@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:48:09 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/25 16:23:19 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:24:58 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 int main(void)
 {
+	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
 	ClapTrap herbert("Herbert");
 	ClapTrap mirko("Mirko");
 
-	herbert.attack("Mirko");
-	mirko.takeDamage(0);
+	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
+	make_attack_happen(herbert, mirko);
 	mirko.beRepaired(50);
-	mirko.attack("Herbert");
-	herbert.takeDamage(0);
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.attack("Zombie");
-	mirko.attack("Herbert");
-	mirko.attack("Herbert");
-	mirko.takeDamage(45);
-	mirko.takeDamage(45);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	make_attack_happen(mirko, herbert);
+	mirko.takeDamage(50);
+	mirko.takeDamage(50);
+	std::cout<<std::endl;
+	make_attack_happen(herbert, mirko);
+	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
+
 }
