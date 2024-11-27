@@ -21,7 +21,6 @@
 #define M   "\033[35m"
 #define C   "\033[36m"
 #define W   "\033[37m"
-#define L   "\033[38m"
 
 #include <string>
 #include <iostream>

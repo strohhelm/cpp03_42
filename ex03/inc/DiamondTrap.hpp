@@ -17,6 +17,8 @@
 #include "FragTrap.hpp"
 #include <string>
 #include <iostream>
+#define L   "\033[38m"
+
 
 class DiamondTrap : public ScavTrap, public FragTrap
 {

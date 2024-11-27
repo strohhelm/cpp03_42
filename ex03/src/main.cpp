@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/FragTrap.hpp"
-#include "../inc/ScavTrap.hpp"
+#include "../inc/DiamondTrap.hpp"
 
 int main (void)
 {
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
+	DiamondTrap lol("hallo");
 
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 	

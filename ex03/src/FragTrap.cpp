@@ -34,7 +34,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 /*----------------------------------------------------------------------------*/
 
 // Copy constructor
-FragTrap::FragTrap(const FragTrap& original)
+FragTrap::FragTrap(const FragTrap& original) : ClapTrap()
 {
 	std::cout<<C<<"FragTrap copy constructor called"<<X<<std::endl;
 	*this = original;

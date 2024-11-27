@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 /*----------------------------------------------------------------------------*/
 
 // Copy constructor
-ScavTrap::ScavTrap(const ScavTrap& original)
+ScavTrap::ScavTrap(const ScavTrap& original) : ClapTrap()
 {
 	std::cout<<M<<"ScavTrap copy constructor called"<<X<<std::endl;
 	*this = original;

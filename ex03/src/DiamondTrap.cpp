@@ -17,7 +17,7 @@
 /* ************************************************************************** */
 
 //Default constructor
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->_gate_keeper_mode = false;
 	std::cout<<L<<"DiamondTrap default constructor called!\n"<<X<<std::endl;
@@ -25,7 +25,7 @@ DiamondTrap::DiamondTrap(void)
 /*----------------------------------------------------------------------------*/
 
 // Initializing constructor
-DiamondTrap::DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
 	this->_gate_keeper_mode = false;
 	std::cout	<<L<<"DiamondTrap name setting constructor called: "
@@ -36,7 +36,7 @@ DiamondTrap::DiamondTrap(std::string name)
 /*----------------------------------------------------------------------------*/
 
 // Copy constructor
-DiamondTrap::DiamondTrap(const DiamondTrap& original)
+DiamondTrap::DiamondTrap(const DiamondTrap& original) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout<<L<<"DiamondTrap copy constructor called"<<X<<std::endl;
 	*this = original;
