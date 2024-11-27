@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 18:15:34 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/27 18:27:41 by pstrohal         ###   ########.fr       */
+/*   Created: 2024/11/27 18:07:17 by pstrohal          #+#    #+#             */
+/*   Updated: 2024/11/27 18:28:11 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include <string>
 #include <iostream>
-#include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(const FragTrap& original);
-		~FragTrap();
-		FragTrap& operator=(const FragTrap& original);
-		
-		void	highFiveGuys(void);
+		DiamondTrap();
+		~DiamondTrap();
+		DiamondTrap(const DiamondTrap& original);
+		DiamondTrap(std::string name);
+		DiamondTrap& operator=(const DiamondTrap& original);
+	private:
+			std::string	_name;
 };
 
 #endif

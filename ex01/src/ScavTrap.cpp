@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:47:56 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:36:04 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/27 11:33:47 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	ScavTrap::attack(const std::string& target)
 	else {
 		std::cout	<<M<<"Too bad! ScavTrap "
 					<<G<<this->_name<<M
-					<<" cant attack, it is out of energy points!"
+					<<" cant attack, it is out of energy                  points!"
 					<<X<<std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 18:51:41 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:27:21 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define M   "\033[35m"
 #define C   "\033[36m"
 #define W   "\033[37m"
+#define L   "\033[38m"
 
 #include <string>
 #include <iostream>
