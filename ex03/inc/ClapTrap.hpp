@@ -52,7 +52,7 @@ class ClapTrap
 	protected:
 		std::string		_name;
 		unsigned int	_health_points;
-		unsigned int	_energy_points;
+		unsigned int	_eANIMAL_HPPnergy_points;
 		unsigned int	_attack_damage;
 };
 

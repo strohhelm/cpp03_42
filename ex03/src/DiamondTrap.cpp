@@ -85,5 +85,3 @@ void DiamondTrap::whoAmI(void)
 				<<" Damn my Parents!\n"<<X
 				<<std::endl;
 }
-
-
