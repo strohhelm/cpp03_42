@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = main
+NAME = DiamondTrap
 
 CC = c++
 
@@ -29,7 +29,8 @@ vpath %.d $(DEP_DIR)
 FILES =	main.cpp \
 		ScavTrap.cpp \
 		FragTrap.cpp \
-		DiamondTrap.cpp
+		DiamondTrap.cpp \
+		ClapTrap.cpp
 
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))
 OBJ =	$(addprefix $(OBJ_DIR)/, $(FILES:%.cpp=%.o))

@@ -13,14 +13,14 @@
 #ifndef DIAMONDTRAP_HPP
 #define DIAMONDTRAP_HPP
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "./ScavTrap.hpp"
+#include "./FragTrap.hpp"
 #include <string>
 #include <iostream>
 #define L   "\033[38m"
 
 
-class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
+class DiamondTrap :  public ScavTrap,  public FragTrap
 {
 	public:
 		DiamondTrap();

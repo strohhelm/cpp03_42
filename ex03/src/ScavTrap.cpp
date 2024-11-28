@@ -20,7 +20,7 @@
 ScavTrap::ScavTrap() : ClapTrap("<unnamed>", 100, 50, 20)
 {
 	this->_gate_keeper_mode = false;
-	std::cout<<M<<"ScavTrap default constructor called!\n"<<X<<std::endl;
+	std::cout<<M<<"ScavTrap default constructor called!"<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
 

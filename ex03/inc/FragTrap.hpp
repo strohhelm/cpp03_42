@@ -15,7 +15,7 @@
 
 #include <string>
 #include <iostream>
-#include "../inc/ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap
 {

@@ -18,7 +18,7 @@
 
 //Default constructor
 ClapTrap::ClapTrap()
-	:_name("unnamed"), _health_points(10), _energy_points(10), _attack_damage(0)
+	:_name("<unnamed>"), _health_points(10), _energy_points(10), _attack_damage(0)
 {
 	std::cout<<Y<<"ClapTrap default constructor called!"<<X<<std::endl;
 }
@@ -191,6 +191,17 @@ int ClapTrap::getEnergyPoints(void)
 	return (this->_energy_points);
 }
 /*----------------------------------------------------------------------------*/
+
+void	ClapTrap::get_status(void)
+{
+	std::cout	<<Y<<"ClapTrap "
+				<< this->_name
+				<<" Status: HP:"
+				<<B<<this->_health_points<<Y
+				<<" EP:"<<B<<this->_energy_points<<Y
+				<<" AD:"<<B<<this->_attack_damage<<X
+				<<std::endl;
+}
 
 /* ************************************************************************** */
 /*			OTHER FUNCTIONS												  */

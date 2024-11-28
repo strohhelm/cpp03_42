@@ -17,6 +17,9 @@ int main (void)
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
 	DiamondTrap lol;
 
+	lol.whoAmI();
+	lol.get_status();
+	lol.attack("someone");
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 	
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
