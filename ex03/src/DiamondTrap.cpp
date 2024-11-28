@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 18:06:37 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/27 18:21:37 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:02:13 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,24 @@
 DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->_gate_keeper_mode = false;
+	this->_health_points = 100;
+	this->_attack_damage = 30;
+	this->_energy_points = 50;
+	this->_name = "<default>";
 	std::cout<<L<<"DiamondTrap default constructor called!\n"<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
 
 // Initializing constructor
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(), ScavTrap(), FragTrap(name + "_clap_name")
 {
 	this->_gate_keeper_mode = false;
+	this->_health_points = 100;
+	this->_attack_damage = 30;
+	this->_energy_points = 50;
+	this->_name = name;
 	std::cout	<<L<<"DiamondTrap name setting constructor called: "
-				<<G<<name<<L
+				<<G<<_name<<L
 				<<" was constructed!\n"
 				<<X<<std::endl;
 }

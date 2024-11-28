@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:15:34 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/27 18:27:41 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 11:47:51 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 #include <iostream>
-#include "ClapTrap.hpp"
+#include "../inc/ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap
 {

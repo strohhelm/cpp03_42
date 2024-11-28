@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:18:02 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:37:36 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 11:44:24 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main (void)
 {
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
-	DiamondTrap lol("hallo");
+	DiamondTrap lol;
 
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 	
