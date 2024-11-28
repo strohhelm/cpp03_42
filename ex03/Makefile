@@ -6,7 +6,7 @@
 #    By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 11:17:57 by pstrohal          #+#    #+#              #
-#    Updated: 2024/11/28 11:45:13 by pstrohal         ###   ########.fr        #
+#    Updated: 2024/11/28 17:23:37 by pstrohal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ OBJ =	$(addprefix $(OBJ_DIR)/, $(FILES:%.cpp=%.o))
 
 DEP:= $(OBJ:.o=.d)
 DEPFLAGS = -MMD -MP
-FLAGS = -Wall -Wextra -Werror -Wshadow
+FLAGS = -Wall -Wextra -Werror -Wno-shadow
 INCLUDES = -I$(INC_DIR)
 
 all: $(NAME)

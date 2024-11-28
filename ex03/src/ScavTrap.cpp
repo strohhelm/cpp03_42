@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:47:56 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:35:49 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:57:17 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 //Default constructor
 ScavTrap::ScavTrap() : ClapTrap("<unnamed>", 100, 50, 20)
 {
-	this->_gate_keeper_mode = false;
 	std::cout<<M<<"ScavTrap default constructor called!"<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
@@ -27,10 +26,9 @@ ScavTrap::ScavTrap() : ClapTrap("<unnamed>", 100, 50, 20)
 // Initializing constructor
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
-	this->_gate_keeper_mode = false;
 	std::cout	<<M<<"ScavTrap name setting constructor called: "
 				<<G<<name<<M
-				<<" was constructed!\n"
+				<<" was constructed!"
 				<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
@@ -62,11 +60,10 @@ ScavTrap::~ScavTrap()
 ScavTrap& ScavTrap::operator=(const ScavTrap& original)
 {
 	std::cout<<M<<"ScavTrap Copy assignment operator called"<<X<<std::endl;
-	this->_name = original._name;
-	this->_energy_points = original._energy_points;
-	this->_health_points = original._health_points;
-	this->_attack_damage = original._attack_damage;
-	this->_gate_keeper_mode = original._gate_keeper_mode;
+	if (!(this == &original))
+	{
+		ClapTrap::operator=(original);
+	}
 	return *this;
 }
 
@@ -104,7 +101,6 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate(void)
 {
-	this->_gate_keeper_mode = true;
 	std::cout	<<M<<"ScavTrap "
 				<<G<<this->_name<<M
 				" is now in GateKeeper mode!"

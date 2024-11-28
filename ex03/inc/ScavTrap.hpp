@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:46:31 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/27 18:27:33 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:53:05 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap& operator=(const ScavTrap& original);
 		
 		void	attack(const std::string& target);
-		
 		void	guardGate(void);
-		
-	protected:
-		bool _gate_keeper_mode;
 };
 void make_attack_happen(ScavTrap& attacker, ClapTrap &target);
 void make_attack_happen(ScavTrap& attacker, ScavTrap &target);

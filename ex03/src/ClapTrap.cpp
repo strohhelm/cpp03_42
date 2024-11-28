@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:36:54 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:13:19 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 16:22:44 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,12 +195,12 @@ int ClapTrap::getEnergyPoints(void)
 void	ClapTrap::get_status(void)
 {
 	std::cout	<<Y<<"ClapTrap "
-				<< this->_name
+				<< G<<this->_name<<Y
 				<<" Status: HP:"
 				<<B<<this->_health_points<<Y
 				<<" EP:"<<B<<this->_energy_points<<Y
 				<<" AD:"<<B<<this->_attack_damage<<X
-				<<std::endl;
+				<<"\n"<<std::endl;
 }
 
 /* ************************************************************************** */

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:18:47 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 19:11:03 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:48:01 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 //Default constructor
 FragTrap::FragTrap() : ClapTrap("<unnamed>", 100, 100, 30)
 {
-	std::cout<<C<<"FragTrap default constructor called!\n"<<X<<std::endl;
+	std::cout<<L<<"FragTrap default constructor called!"<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
 
 // Initializing constructor
 FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
-	std::cout	<<C<<"FragTrap name setting constructor called: "
-				<<G<<name<<C
-				<<" was constructed!\n"
+	std::cout	<<L<<"FragTrap name setting constructor called: "
+				<<G<<name<<L
+				<<" was constructed!"
 				<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
@@ -37,7 +37,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 // Copy constructor
 FragTrap::FragTrap(const FragTrap& original) : ClapTrap()
 {
-	std::cout<<C<<"FragTrap copy constructor called"<<X<<std::endl;
+	std::cout<<L<<"FragTrap copy constructor called"<<X<<std::endl;
 	*this = original;
 	std::cout<<std::endl;
 }
@@ -47,8 +47,8 @@ FragTrap::FragTrap(const FragTrap& original) : ClapTrap()
 // Default destructor
 FragTrap::~FragTrap()
 {
-	std::cout	<<C<<"FragTrap default destructor called "
-				<<G<<this->_name<<C
+	std::cout	<<L<<"FragTrap default destructor called "
+				<<G<<this->_name<<L
 				<<" was destructed!"
 				<<X<<std::endl;
 }
@@ -60,7 +60,7 @@ FragTrap::~FragTrap()
 
 FragTrap& FragTrap::operator=(const FragTrap& original)
 {
-	std::cout<<C<<"FragTrap Copy assignment operator called"<<X<<std::endl;
+	std::cout<<L<<"FragTrap Copy assignment operator called"<<X<<std::endl;
 	this->_name = original._name;
 	this->_energy_points = original._energy_points;
 	this->_health_points = original._health_points;
@@ -75,8 +75,8 @@ FragTrap& FragTrap::operator=(const FragTrap& original)
 
 void	FragTrap::highFiveGuys(void)
 {
-	std::cout	<<C<<"Hey Guys i'm "
-				<<G<<this->_name<<C
-				<<" let's high five!"
+	std::cout	<<L<<"Hey Guys! I'm "
+				<<G<<this->_name<<L
+				<<" let's high five!\n"
 				<<X<<std::endl;
 }

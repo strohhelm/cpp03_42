@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 18:06:37 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 12:02:13 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 18:06:22 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,20 @@
 /* ************************************************************************** */
 
 //Default constructor
-DiamondTrap::DiamondTrap(void) : ClapTrap(("<default>_clap_name")), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(void) : ClapTrap("<default>_clap_name", 100, 50, 30), ScavTrap(), FragTrap()
 {
-	this->_gate_keeper_mode = false;
-	this->_health_points = 100;
-	this->_attack_damage = 30;
-	this->_energy_points = 50;
 	this->_name = "<default>";
-	std::cout<<"DiamondTrap default constructor called!\n"<<X<<std::endl;
+	std::cout<<D<<"DiamondTrap default constructor called!\n"<<X<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
 
 // Initializing constructor
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(), ScavTrap(), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name", 100, 50, 30), ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
 {
-	this->_gate_keeper_mode = false;
-	this->_health_points = 100;
-	this->_attack_damage = 30;
-	this->_energy_points = 50;
 	this->_name = name;
-	std::cout	<<"DiamondTrap name setting constructor called: "
-				<<G<<_name<<X
-				<<" was constructed!\n"
+	std::cout	<<D<<"DiamondTrap name setting constructor called: "
+				<<G<<_name<<D
+				<<" was constructed!\n"<<X
 				<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
@@ -46,7 +38,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(), ScavTrap(), FragTrap(na
 // Copy constructor
 DiamondTrap::DiamondTrap(const DiamondTrap& original) : ClapTrap(), ScavTrap(), FragTrap()
 {
-	std::cout<<"DiamondTrap copy constructor called"<<X<<std::endl;
+	std::cout<<D<<"DiamondTrap copy constructor called"<<X<<std::endl;
 	*this = original;
 	std::cout<<std::endl;
 }
@@ -56,9 +48,9 @@ DiamondTrap::DiamondTrap(const DiamondTrap& original) : ClapTrap(), ScavTrap(), 
 // Default destructor
 DiamondTrap::~DiamondTrap()
 {
-	std::cout	<<"DiamondTrap default destructor called "
-				<<G<<this->_name<<X
-				<<" was destructed!"
+	std::cout	<<D<<"DiamondTrap default destructor called "
+				<<G<<this->_name<<D
+				<<" was destructed!"<<X
 				<<std::endl;
 }
 
@@ -69,9 +61,12 @@ DiamondTrap::~DiamondTrap()
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& original)
 {
-	std::cout<<"DiamondTrap Copy assignment operator called"<<X<<std::endl;
-	this->_name = original._name;
-	this->_gate_keeper_mode = original._gate_keeper_mode;
+	if (this != &original)
+	{
+		ClapTrap::operator=(original);
+		this->_name = original._name;
+	}
+	std::cout<<D<<"DiamondTrap Copy assignment operator called!\n"<<X<<std::endl;
 	return *this;
 }
 
@@ -83,16 +78,12 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& original)
 
 void DiamondTrap::whoAmI(void)
 {
-	std::cout	<<"Hi! I am a cruel ugly mix of inbread classes.\nMy Names are:\n"
-				<<G<<this->_name
-				<<"\n"
-				<<this->getName()<<X
-				<<" Damn my Parents!\n"
+	std::cout	<<D<<"Hi! I am a cruel ugly mix of inbread classes.\nMy Names are:\nDiamondTrap Name: "
+				<<G<<this->_name<<D
+				<<"\nClapTrap Name: "
+				<<G<<this->getName()<<D
+				<<" Damn my Parents!\n"<<X
 				<<std::endl;
-}
-std::string DiamondTrap::getDiamondName(void)
-{
-	return (this->_name);
 }
 
 

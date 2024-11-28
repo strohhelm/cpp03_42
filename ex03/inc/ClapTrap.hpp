@@ -6,21 +6,24 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 11:48:32 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:53:27 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
-#define X   "\033[0m"
-#define R   "\033[31m"
-#define G   "\033[32m"
-#define Y   "\033[33m"
-#define B   "\033[34m"
-#define M   "\033[35m"
-#define C   "\033[36m"
-#define W   "\033[37m"
+#define X	"\033[0m"
+#define R	"\033[31m"
+#define G	"\033[32m"
+#define L	"\033[38;2;50;150;50m"
+#define D	"\033[38;2;155;220;255m"
+#define Y	"\033[33m"
+#define	O	"\033[38;2;255;165;0m"
+#define B	"\033[34m"
+#define M	"\033[35m"
+#define C	"\033[36m"
+#define W	"\033[37m"
 
 #include <string>
 #include <iostream>
@@ -36,8 +39,8 @@ class ClapTrap
 		ClapTrap& operator=(const ClapTrap& original);
 
 		virtual void	attack(const std::string& target);
-		void		takeDamage(unsigned int amount);
-		void		beRepaired(unsigned int amount);
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 
 		std::string	getName(void);
 		int			getAttackDamage(void);
