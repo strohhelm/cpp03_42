@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:18:02 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:49:23 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:05:58 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,32 +23,32 @@ int main (void)
 	
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 	lol.whoAmI();
-	lol.get_status();
+	lol.getStatus();
 	lol = lol2;
 	lol = rlol;
 	lol.whoAmI();
-	lol.get_status();
+	lol.getStatus();
 	lol.highFiveGuys();
 	
 	rick.whoAmI();
-	rick.get_status();
+	rick.getStatus();
 	rick.highFiveGuys();
 
 	make_attack_happen(lol, rick);
-	lol.get_status();
-	rick.get_status();
+	lol.getStatus();
+	rick.getStatus();
 	make_attack_happen(rick, bud);
 	lol.takeDamage(500);
 	lol.whoAmI();
-	lol.get_status();
+	lol.getStatus();
 	lol = bud;
-	lol.get_status();
+	lol.getStatus();
 	lol.beRepaired(800);
-	lol.get_status();
+	lol.getStatus();
 	bud.whoAmI();
-	bud.get_status();
+	bud.getStatus();
 	ClapTrap *t = new FragTrap("dada");
-	t->get_status();
+	t->getStatus();
 	delete t;
 	
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 20:06:37 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:05:26 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class ClapTrap
 		int			getAttackDamage(void);
 		int			getHealthPoints(void);
 		int			getEnergyPoints(void);
+		void		getStatus(void);
 
 	protected:
 		std::string		_name;

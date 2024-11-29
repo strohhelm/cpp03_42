@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:49:02 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:05:46 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class ClapTrap
 		int			getAttackDamage(void);
 		int			getHealthPoints(void);
 		int			getEnergyPoints(void);
-		void		get_status(void);
+		void		getStatus(void);
 
 
 	protected:

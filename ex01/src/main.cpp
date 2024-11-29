@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:12:21 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:11:07 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:12:27 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main (void)
 	ScavTrap stupid;
 	ClapTrap troy("Troy");
 	ClapTrap test(lulatsch);
+	ScavTrap *s = new ScavTrap(honk);
 
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 
@@ -42,4 +43,5 @@ int main (void)
 	
 	honk.beRepaired(40);
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
+	delete s;
 }

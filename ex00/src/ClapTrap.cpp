@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:36:54 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/26 20:19:24 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:04:42 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 //Default constructor
 ClapTrap::ClapTrap()
-	:_name("unnamed"), _health_points(10), _energy_points(10), _attack_damage(0)
+	:_name("<unnamed>"), _health_points(10), _energy_points(10), _attack_damage(0)
 {
 	std::cout<<Y<<"ClapTrap default constructor called!"<<X<<std::endl;
 }
@@ -191,6 +191,17 @@ int ClapTrap::getEnergyPoints(void)
 	return (this->_energy_points);
 }
 /*----------------------------------------------------------------------------*/
+
+void	ClapTrap::getStatus(void)
+{
+	std::cout	<<Y<<"ClapTrap "
+				<< G<<this->_name<<Y
+				<<" Status: HP:"
+				<<B<<this->_health_points<<Y
+				<<" EP:"<<B<<this->_energy_points<<Y
+				<<" AD:"<<B<<this->_attack_damage<<X
+				<<"\n"<<std::endl;
+}
 
 /* ************************************************************************** */
 /*			OTHER FUNCTIONS												  */

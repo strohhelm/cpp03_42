@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:18:02 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:55:19 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:15:08 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int main (void)
 	frank.highFiveGuys();
 	frank.highFiveGuys();
 	rando.highFiveGuys();
+
 	FragTrap *f = new FragTrap("Pico");
 	f->highFiveGuys();
 	delete f;

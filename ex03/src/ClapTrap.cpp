@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:36:54 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 16:22:44 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:05:39 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,7 +192,7 @@ int ClapTrap::getEnergyPoints(void)
 }
 /*----------------------------------------------------------------------------*/
 
-void	ClapTrap::get_status(void)
+void	ClapTrap::getStatus(void)
 {
 	std::cout	<<Y<<"ClapTrap "
 				<< G<<this->_name<<Y
