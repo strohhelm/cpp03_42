@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:18:02 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 20:20:09 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:49:23 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int main (void)
 	lol.get_status();
 	bud.whoAmI();
 	bud.get_status();
+	ClapTrap *t = new FragTrap("dada");
+	t->get_status();
+	delete t;
 	
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
 }

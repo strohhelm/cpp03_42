@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:47:56 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 17:57:17 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 10:56:44 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& original)
 
 void	ScavTrap::attack(const std::string& target)
 {
-	if (!(this->_health_points > 0)){
+	if (this->_health_points <= 0){
 		std::cout	<<M<<"ScavTrap "
 					<<G<<this->_name<<M
 					<<" cannot attack, it is dead as can be!"

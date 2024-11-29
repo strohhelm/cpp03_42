@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 14:26:27 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/28 17:53:27 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:49:02 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class ClapTrap
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& original);
 		ClapTrap(std::string name, unsigned int hp, unsigned int ep, unsigned int ap);
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap& operator=(const ClapTrap& original);
 
 		virtual void	attack(const std::string& target);
@@ -52,7 +52,7 @@ class ClapTrap
 	protected:
 		std::string		_name;
 		unsigned int	_health_points;
-		unsigned int	_eANIMAL_HPPnergy_points;
+		unsigned int	_energy_points;
 		unsigned int	_attack_damage;
 };
 
